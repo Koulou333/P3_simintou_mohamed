@@ -1,0 +1,22 @@
+{
+  "name": "p3_simintou_mohamed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koulou333/P3_simintou_mohamed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Koulou333/P3_simintou_mohamed/issues"
+  },
+  "homepage": "https://github.com/Koulou333/P3_simintou_mohamed#readme",
+  "dependencies": {
+    "sass": "^1.49.10"
+  }
+}
