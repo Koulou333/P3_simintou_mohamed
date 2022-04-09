@@ -1,0 +1,30 @@
+@import "../utils/box-shadow.scss";
+
+.explorer {
+    text-align: center;   
+    background-color: #fafafa; 
+    padding-bottom: 5rem;
+    & h2 {
+        margin-top: 0rem;
+        padding-top: 2.5rem;
+        font-size: 2rem;
+    }   
+    & p {
+        font-size: 1.5rem;
+    }
+    & button {
+        color: white;
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        border: none;
+        background-image: linear-gradient(to top, #9356DC, #FF79DA);
+        transition: transform 200ms;
+        margin-top: 1rem;
+        @include base-shadow;
+    }
+    & button:hover {
+        transform: scale(1.02);
+    }
+}

@@ -1,0 +1,102 @@
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
+
+img{
+    max-width: 100%;
+}
+
+.resto-main {
+    padding: 0 1rem;
+  }
+  .menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @media (max-width: variables.$breakpoint) {
+      grid-template-columns: 1fr;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      position: relative;
+      margin-bottom: 1rem;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        height: 0.25rem;
+        width: 3rem;
+        background-color: colors.$color-tertiary;
+      }
+    }
+    .menus__category {
+      overflow: hidden;
+
+      .menu-item {
+        $numberOfItems: 3;
+        @for $i from 1 through $numberOfItems {
+          &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+          }
+        }
+        display: flex;
+        background-color: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin: 0.5rem;
+        @include mixins.box-shadow;
+        animation: appear 1s;
+        animation-fill-mode: both;
+
+        .menu-item__price {
+          margin-left: auto;
+          font-weight: 900;
+          padding: 1rem;
+          display: flex;
+          align-items: flex-end;
+        }
+        .menu-item__description {
+          padding: 1rem;
+          overflow: hidden;
+          h4,
+          p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .menu-item__check {
+          display: grid;
+          place-items: center;
+          flex-shrink: 0;
+          $button-width: 4rem;
+          border-radius: 0 1rem 1rem 0;
+          background-color: colors.$color-tertiary;
+          margin-right: -1 * $button-width;
+          width: $button-width;
+          transition: margin-right 0.5s;
+          i {
+            $size: 1rem;
+            display: grid;
+            place-items: center;
+            background: white;
+            height: $size;
+            width: $size;
+            border-radius: 1rem;
+            color: colors.$color-tertiary;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .menu-item__check {
+            margin-right: 0;
+          }
+        
+        }
+      }
+    }
+  }
+
