@@ -1,0 +1,100 @@
+
+
+main .city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+main .city i {
+
+}
+
+/* Explorer */
+
+.explorer {
+    text-align: center;
+}
+
+.explorer h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.explorer p {
+    font-size: 1.5rem;
+}
+
+.explorer button {
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 2px 1px 7px -3px #000;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    transition: transform 200ms;
+    margin-top: 1rem;
+}
+
+.explorer button:hover {
+    transform: scale(1.02);
+    opacity: O.9;
+}
+
+/* contenu */
+
+#homepage .menus {
+    background-color: #f6f6f6;
+    margin-bottom: 2rem;
+}
+
+/* pied de page */
+footer {
+    background-color: #353535;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+footer h2 {
+    font-family: "Shrikhand", "sans-serif";
+    font-weight: 500;
+    padding: 1rem 0;
+}
+footer p {
+    padding: 0.2rem;
+  }
+
+  i {
+    @include animations.quarterspin;
+    animation: quarterspin 0.5s ease-in-out;
+  }
+
+  @use "../utils/animations";
+
+  @mixin quarterspin {
+    @keyframes quarterspin {
+      0% {
+        transform: rotate(-270deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
