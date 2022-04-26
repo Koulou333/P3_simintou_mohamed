@@ -1,100 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <title>Ohmyfood</title>
+   <title>ohmyfood</title>
    <link rel="stylesheet" type="text/css" href="css/styles.css">
    <link rel="stylesheet" type="text/css" href="css/responsive.css">
    <script src="https://kit.fontawesome.com/e8e3e14358.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="homepage">
-    <div class="loader"></div>
-    <header>
-        <h1>Ohmyfood</h1>
-    </header>
+<!-- En tete -->
+        <body id="homepage">
+            <div class="loader"></div>
+            <header><h1>ohmyfood</h1></header>
 
-<main>
-    <div class="city">
-        <i class="fas fa-map-marker-alt"></i>
-        <h2>Paris, Belleville</h2>
-    </div>
+<!-- Contenu principal -->
+        <main>
+            <form class="city">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Paris, Belleville">
+            </form>
 
-    <section class="explorer">
-        <h2>Réservez le menu qui<br>vous convient</h2>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins
-        </p>
-        <button>Explorer nos restaurants</button>
-    </section>
+        <!-- section city -->
+            <section class="explorer">
+                <h2>Réservez le menu qui<br>vous convient</h2>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins
+                </p>
+                <button>Explorer nos restaurants</button>
+            </section>
 
-    <section class="tuto">
-        <h2>Fonctionnement</h2>
-        <ol>
-            <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-            <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
-            <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
-        </ol>
-    </section>
+        <!-- section tuto -->
+            <section class="tuto">
+                <h2>Fonctionnement</h2>
+                <ol>
+                    <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                    <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                    <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+                </ol>
+            </section>
 
-    <section class="menus">
-        <h2>Restaurants</h2>
-        <div class="menus__cards">
+        <!-- section menus  -->
+            <section class="menus">
+                <h2>Restaurants</h2>
+                <div class="menus__cards">
+                <article class="card new">
+                    <a href="./pages/resto-1.html">
+                        <div class="card__image card__image-1"></div>
+                        <div class="card__description">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                    </a>
+                </article>
 
-            <a href="./pages/resto-1.html">
-                <div class="card__image card__image-1">                </div>
-                <div class="card__description">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
+                <article class="card new">
+                    <a href="./pages/resto-2.html" >
+                        <div class="card__image card__image-2"></div>
+                        <div class="card__description">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="./pages/resto-3.html" >
+                        <div class="card__image card__image-3"></div>
+                        <div class="card__description">
+                            <h3>A la francaise</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="./pages/resto-4.html" class="card">
+                        <div class="card__image card__image-4"></div>
+                        <div class="card__description">
+                            <h3>Le délice de sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                    </a>
+                </article>
                 </div>
+            </section>
+        </main>
+
+<!-- pied de page -->
+        <footer>
+            <h2>ohmyfood</h2>
+
+            <a href="#">
+                <p>
+                <i class="fas fa-utensils"></i>
+                Proposer un restaurant
+                </p>
             </a>
 
-            <a href="./pages/resto-2.html" class="card new">
-                <div class="card__image card__image-2"></div>
-                <div class="card__description">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                </div>
+            <a href="#">  
+                <i class="fas fa-hands-helping"></i>
+                Devenir partenaire
             </a>
+            
+            <a href="#">Mentions légales</a>
 
-            <a href="./pages/resto-3.html" class="card">
-                <div class="card__image card__image-3"></div>
-                <div class="card__description">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
-                </div>
-            </a>
+            <a href="mailto:mohamedsimintou@gmail.com">Contact</a>
+        </footer>
 
-            <a href="./pages/resto-4.html" class="card">
-            <div class="card__image card__image-4"></div>
-            <div class="card__description">
-                <h3>Le Délice des sens</h3>
-                <p>Folie-Méricourt</p>
-            </div>
-            </a>
-        </div>
-    </section>
-
-</main>
-
-
-
-<footer>
-
-    <h2>ohmyfood</h2>
-    <p><i class="fas fa-utensils"></i>
-    Proposer un restaurant
-    </p>
-
-    <p><i class="fas fa-hands-helping"></i>
-    Devenir partenaire
-    </p>
-    
-    <p>Mentions légales</p>
-
-    <p><a href="mailto:mohamedsimintou@gmail.com">Contact</a>
-    </p>
-</footer>
-
-</body>
-
+    </body>
 </html>
 
