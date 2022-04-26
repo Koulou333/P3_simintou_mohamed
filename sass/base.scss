@@ -11,3 +11,32 @@ body {
     margin: 0;
     font-family: "Roboto" , sans-serif;
 }
+
+header h1{
+    padding: 1rem 0;
+}
+
+main{
+    margin-bottom: 0rem;
+}
+
+h2{
+    padding: 3rem 0rem 1rem 0rem;
+    margin: 0;
+}
+
+h3,
+p{
+    margin: 0%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+footer a {
+    background-color: transparent;
+}
