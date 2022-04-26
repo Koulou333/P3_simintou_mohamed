@@ -1,15 +1,51 @@
-@use "../utils/variables.scss";
-@use "../utils/colors.scss";
-@use "../utils/mixins.scss";
+@use "../utils/mixins";
+@use "../utils/variables";
+@use "../utils/colors";
+@use "../utils/animations";
 
 
 img{
-    max-width: 100%;
+  max-width: 100%;
 }
 
-.resto-main {
-    padding: 0 1rem;
+#page-resto {
+  header {
+    &:hover::before {
+      @include mixins.transform-zoom($zoom-level: 1.2, $transformation: translateY(-50%));
+    }
+    &::before {
+      @include mixins.font-awesome($font-weight: 900);
+      content: "\f060";
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      transition: transform 200ms;
+    }
   }
+
+  .banner img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .resto__title {
+    margin-top: -2rem;
+    h2 {
+      font-family: "Shrikhand", "cursive";
+      padding: 2rem 1rem;
+      @include mixins.heart-animated;
+      border-radius: 2rem 2rem 0 0;
+      background-color: colors.$lightergrey;
+    }
+  }
+
+  .resto-main {
+    padding: 0;
+  }
+
   .menus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,11 +57,11 @@ img{
       text-transform: uppercase;
       font-weight: 400;
       position: relative;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       &::after {
         content: "";
         position: absolute;
-        top: 1.5rem;
+        top: 25px;
         left: 0;
         height: 0.25rem;
         width: 3rem;
@@ -34,6 +70,7 @@ img{
     }
     .menus__category {
       overflow: hidden;
+      margin: 1rem;
 
       .menu-item {
         $numberOfItems: 3;
@@ -66,6 +103,7 @@ img{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            margin: 4px 0px 0px 0px;
           }
         }
         .menu-item__check {
@@ -94,9 +132,22 @@ img{
           .menu-item__check {
             margin-right: 0;
           }
-        
+          i {
+            @include animations.quarterspin;
+            animation: quarterspin 0.5s ease-in-out;
+          }
         }
       }
     }
   }
 
+  div.order {
+    height: 30vh;
+    display: grid;
+    place-items: center;
+    background-color: #f6f6f6;
+    button {
+      @include mixins.base-button;
+    }
+  }
+}
